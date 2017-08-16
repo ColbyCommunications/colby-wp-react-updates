@@ -1,0 +1,59 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/mixins';
+@import '~colby-bootstrap/variables';
+@import '~colby-bootstrap/src/animations';
+
+.Updates {
+  @supports (animation-fill-mode: both) {
+    animation: fadeIn 1s;
+    animation-fill-mode: both;
+  }
+
+  display: flex;
+  align-items: flex-start;
+  padding-top: .75rem;
+  padding-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background: $white;
+  position: relative;
+
+  .update {
+    margin-bottom: .75rem;
+    width: 100%;
+    line-height: 1.26;
+  }
+
+  .update:first-of-type a {
+    font-weight: bold;
+  }
+
+  .updateDate {
+    padding-top: .25rem;
+    text-transform: uppercase;
+    font-size: .841rem;
+  }
+}
+
+.badgeContainer {
+  width: 100%;
+  text-transform: uppercase;
+  padding: 0 0 .75rem;
+}
+
+.badge {
+  background-color: $blue;
+  color: $white;
+
+  @supports (background-color: var(--accent, $blue)) {
+    background-color: var(--accent, $blue);
+    color: var(--accent-text, $white);
+  }
+}
+
+.moreLink {
+  text-transform: uppercase;
+  font-size: .891rem;
+  padding: 0 1.5rem .75rem;
+  margin-left: auto;
+}
