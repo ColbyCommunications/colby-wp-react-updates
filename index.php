@@ -54,7 +54,7 @@ function render_colby_updates_shortcode( $atts ) {
 ";
 }
 
-function add_site_preview_shortcode() {
+function add_colby_updates_shortcode() {
 	add_shortcode( 'colby-updates', 'render_colby_updates_shortcode' );
 }
-add_action( 'init', 'add_site_preview_shortcode' );
+add_action( 'init', 'add_colby_updates_shortcode' );
