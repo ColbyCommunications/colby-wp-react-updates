@@ -1,6 +1,6 @@
 {
   "name": "colby-wp-react-updates",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A component and shortcode for display posts from a WP REST endpoint.",
   "main": "src/",
   "scripts": {
@@ -9,7 +9,10 @@
     "build-all": "npm run build && npm run build-dev"
   },
   "author": "John Watkins",
-  "keywords": ["react", "wordpress"],
+  "keywords": [
+    "react",
+    "wordpress"
+  ],
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -30,11 +33,20 @@
     "webpack": "^2.5.0",
     "webpack-bundle-analyzer": "^2.9.0"
   },
-  "browserslist": ["> 1%", "last 2 versions", "IE 11"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 11"
+  ],
   "eslintConfig": {
-    "extends": ["johnwatkins0"]
+    "extends": [
+      "johnwatkins0"
+    ]
   },
-  "eslintIgnore": ["dist/*.js", "postcss.config.js"],
+  "eslintIgnore": [
+    "dist/*.js",
+    "postcss.config.js"
+  ],
   "dependencies": {
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
     "colby-bootstrap": "^1.0.2",
@@ -46,6 +58,9 @@
     "react-dom": "^15.6.1"
   },
   "babel": {
-    "presets": ["es2015", "react"]
+    "presets": [
+      "es2015",
+      "react"
+    ]
   }
 }
