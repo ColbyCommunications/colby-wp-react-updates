@@ -303,7 +303,7 @@ window.addEventListener('load', loadUpdates);
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"Updates":"Updates--1hIvX","fadeIn":"fadeIn--3OkRA","update":"update--2SBej","updateDate":"updateDate--1GMmn","badgeContainer":"badgeContainer--q7OrV","badge":"badge--1nNG7","moreLink":"moreLink--5tLAa"};
+module.exports = {"Updates":"Updates--1hIvX","fadeIn":"fadeIn--3OkRA","update":"update--2SBej","updateDate":"updateDate--1GMmn","badgeContainer":"badgeContainer--q7OrV","badge":"badge--1nNG7","moreLink":"moreLink--5tLAa","floatInUp":"floatInUp--IeoBH","floatInLeft":"floatInLeft--OPlSI","slideInDown":"slideInDown--13zT1"};
 
 /***/ }),
 /* 7 */
