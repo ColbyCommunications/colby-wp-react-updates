@@ -35,6 +35,15 @@ const Updates = ({
         <div className={styles.updateDate}>
           {dateFns.format(update.date, 'MMMM DD, YYYY')}
         </div>
+        <div
+          className={`${styles.excerpt} pt-2`}
+          dangerouslySetInnerHTML={{
+            __html: update.excerpt.rendered.replace(
+              '&#8230;',
+              `... <a href=${update.link}>Continue reading</a>`
+            ),
+          }}
+        />
       </div>)
     )}
     {moreLink

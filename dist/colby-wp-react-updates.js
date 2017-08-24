@@ -237,7 +237,13 @@ var Updates = function Updates(_ref) {
           'div',
           { className: _UpdatesModule2.default.updateDate },
           _dateFns2.default.format(update.date, 'MMMM DD, YYYY')
-        )
+        ),
+        _react2.default.createElement('div', {
+          className: _UpdatesModule2.default.excerpt + ' pt-2',
+          dangerouslySetInnerHTML: {
+            __html: update.excerpt.rendered.replace('&#8230;', '... <a href=' + update.link + '>Continue reading</a>')
+          }
+        })
       );
     }),
     moreLink ? _react2.default.createElement(
@@ -303,7 +309,7 @@ window.addEventListener('load', loadUpdates);
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"Updates":"Updates--1hIvX","fadeIn":"fadeIn--3OkRA","update":"update--2SBej","updateDate":"updateDate--1GMmn","badgeContainer":"badgeContainer--q7OrV","badge":"badge--1nNG7","moreLink":"moreLink--5tLAa","floatInUp":"floatInUp--IeoBH","floatInLeft":"floatInLeft--OPlSI","slideInDown":"slideInDown--13zT1"};
+module.exports = {"Updates":"Updates--1hIvX","fadeIn":"fadeIn--3OkRA","update":"update--2SBej","updateDate":"updateDate--1GMmn","badgeContainer":"badgeContainer--q7OrV","badge":"badge--1nNG7","moreLink":"moreLink--5tLAa","excerpt":"excerpt--22Fmi","floatInUp":"floatInUp--IeoBH","floatInLeft":"floatInLeft--OPlSI","slideInDown":"slideInDown--13zT1"};
 
 /***/ }),
 /* 7 */
