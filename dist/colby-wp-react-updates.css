@@ -118,6 +118,14 @@
   margin-left: auto; }
 
 .excerpt--22Fmi {
-  font-size: .944rem; }
+  font-size: .891rem;
+  line-height: 1.4; }
+  .excerpt--22Fmi p {
+    margin-bottom: .25rem; }
+
+.continue-link {
+  text-align: right;
+  display: block;
+  color: #d14124; }
 
 /*# sourceMappingURL=colby-wp-react-updates.css.map*/

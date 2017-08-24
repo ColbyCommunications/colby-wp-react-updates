@@ -58,5 +58,15 @@
 }
 
 .excerpt {
-  font-size: .944rem;
+  font-size: .891rem;
+  line-height: 1.4;
+  p {
+    margin-bottom: .25rem;
+  }
+}
+
+:global(.continue-link) {
+  text-align: right;
+  display: block;
+  color: $orange;
 }

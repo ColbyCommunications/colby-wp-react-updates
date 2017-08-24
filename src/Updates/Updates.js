@@ -38,10 +38,14 @@ const Updates = ({
         <div
           className={`${styles.excerpt} pt-2`}
           dangerouslySetInnerHTML={{
-            __html: update.excerpt.rendered.replace(
-              '&#8230;',
-              `... <a href=${update.link}>Continue reading</a>`
-            ),
+            __html: `${update.excerpt.rendered
+              .split(' ')
+              .slice(0, 30)
+              .join(' ')
+              .replace(
+                '&#8230;',
+                ''
+              )} ... <a class="continue-link" href=${update.link}>Continue reading</a>`,
           }}
         />
       </div>)
