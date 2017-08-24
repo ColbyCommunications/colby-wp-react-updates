@@ -28,10 +28,12 @@ const Updates = ({
     </div>
     {(updates || []).map((update) =>
       (<div key={update.id} className={styles.update}>
-        <a
-          href={update.link}
-          dangerouslySetInnerHTML={{ __html: update.title.rendered }}
-        />
+        <h4>
+          <a
+            href={update.link}
+            dangerouslySetInnerHTML={{ __html: update.title.rendered }}
+          />
+        </h4>
         <div className={styles.updateDate}>
           {dateFns.format(update.date, 'MMMM DD, YYYY')}
         </div>
@@ -45,7 +47,7 @@ const Updates = ({
               .replace(
                 '&#8230;',
                 ''
-              )} ... <a class="continue-link" href=${update.link}>Continue reading</a>`,
+              )} ... <a class="continue-link display-3" href=${update.link}>Continue reading</a>`,
           }}
         />
       </div>)

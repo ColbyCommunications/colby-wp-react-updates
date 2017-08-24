@@ -101,7 +101,7 @@
 .badgeContainer--q7OrV {
   width: 100%;
   text-transform: uppercase;
-  padding: 0 0 .75rem; }
+  padding: 0 0 1rem; }
 
 .badge--1nNG7 {
   background-color: #002878;
@@ -126,6 +126,7 @@
 .continue-link {
   text-align: right;
   display: block;
-  color: #d14124; }
+  color: #d14124;
+  font-size: .891rem; }
 
 /*# sourceMappingURL=colby-wp-react-updates.css.map*/

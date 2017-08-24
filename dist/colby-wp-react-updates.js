@@ -229,10 +229,14 @@ var Updates = function Updates(_ref) {
       return _react2.default.createElement(
         'div',
         { key: update.id, className: _UpdatesModule2.default.update },
-        _react2.default.createElement('a', {
-          href: update.link,
-          dangerouslySetInnerHTML: { __html: update.title.rendered }
-        }),
+        _react2.default.createElement(
+          'h4',
+          null,
+          _react2.default.createElement('a', {
+            href: update.link,
+            dangerouslySetInnerHTML: { __html: update.title.rendered }
+          })
+        ),
         _react2.default.createElement(
           'div',
           { className: _UpdatesModule2.default.updateDate },
@@ -241,7 +245,7 @@ var Updates = function Updates(_ref) {
         _react2.default.createElement('div', {
           className: _UpdatesModule2.default.excerpt + ' pt-2',
           dangerouslySetInnerHTML: {
-            __html: update.excerpt.rendered.split(' ').slice(0, 30).join(' ').replace('&#8230;', '') + ' ... <a class="continue-link" href=' + update.link + '>Continue reading</a>'
+            __html: update.excerpt.rendered.split(' ').slice(0, 30).join(' ').replace('&#8230;', '') + ' ... <a class="continue-link display-3" href=' + update.link + '>Continue reading</a>'
           }
         })
       );
