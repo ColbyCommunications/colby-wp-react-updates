@@ -245,7 +245,7 @@ var Updates = function Updates(_ref) {
         _react2.default.createElement('div', {
           className: _UpdatesModule2.default.excerpt + ' pt-2',
           dangerouslySetInnerHTML: {
-            __html: update.excerpt.rendered.split(' ').slice(0, 30).join(' ').replace('&#8230;', '') + ' ... <a class="continue-link display-3" href=' + update.link + '>Continue reading</a>'
+            __html: update.excerpt.rendered.split(' ').slice(0, 30).join(' ') + ' <a class="continue-link display-3" href=' + update.link + '>Continue reading</a>'
           }
         })
       );

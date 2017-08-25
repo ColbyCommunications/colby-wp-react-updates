@@ -43,11 +43,9 @@ const Updates = ({
             __html: `${update.excerpt.rendered
               .split(' ')
               .slice(0, 30)
-              .join(' ')
-              .replace(
-                '&#8230;',
-                ''
-              )} ... <a class="continue-link display-3" href=${update.link}>Continue reading</a>`,
+              .join(
+                ' '
+              )} <a class="continue-link display-3" href=${update.link}>Continue reading</a>`,
           }}
         />
       </div>)
