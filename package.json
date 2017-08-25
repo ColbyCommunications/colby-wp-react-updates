@@ -1,6 +1,6 @@
 {
   "name": "colby-wp-react-updates",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A component and shortcode for display posts from a WP REST endpoint.",
   "main": "src/",
   "scripts": {
