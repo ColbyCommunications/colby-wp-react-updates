@@ -5,7 +5,7 @@ add_action( 'wp_enqueue_scripts', function () {
 
 	if ( has_shortcode( $post->post_content, 'colby-updates' ) ) {
 		$min = PROD === true ? '.min' : '';
-		$dist = plugin_dir_url( __FILE__ ) . 'dist';
+		$dist = plugin_dir_url( __FILE__ ) . '../../dist';
 
 		$package_json = json_decode( file_get_contents( __DIR__ . '/../../package.json' ) )
 			?: (object) [ 'version' => '1.0.1' ];
