@@ -27,12 +27,9 @@ class UpdatesFromEndpoint extends React.Component {
   }
 
   fetchUpdates() {
-    const url = this.props.endpoint.replace(
-      '{{siteUrl}}',
-      window.COLBY_SITE_URL
-    );
+    const url = this.props.endpoint;
 
-    fetch(url).then((response) => response.json()).then((updates) => {
+    fetch(url).then(response => response.json()).then((updates) => {
       this.setState({ updates });
     });
   }
@@ -41,11 +38,7 @@ class UpdatesFromEndpoint extends React.Component {
     return (
       <Updates
         updates={this.state.updates}
-        moreLink={
-          this.props.moreLink
-            ? this.props.moreLink.replace('{{siteUrl}}', window.COLBY_SITE_URL)
-            : null
-        }
+        moreLink={this.props.moreLink ? this.props.moreLink : null}
       />
     );
   }

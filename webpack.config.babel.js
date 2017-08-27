@@ -1,13 +1,11 @@
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import path from 'path';
 import webpack from 'webpack';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 import packageJson from './package.json';
 
 const main = () => {
   const PROD = process.argv.includes('-p');
-  const watching = process.argv.includes('--watch');
   const min = PROD ? '.min' : '';
   const entry = './src/index.js';
   const filename = `${packageJson.name}${min}.js`;
@@ -21,10 +19,6 @@ const main = () => {
         },
       })
     );
-  }
-
-  if (!watching) {
-    plugins.push(new BundleAnalyzerPlugin({ analyzerMode: 'static' }));
   }
 
   return {
@@ -70,7 +64,6 @@ const main = () => {
       'react-dom': 'ReactDOM',
       'date-fns': 'dateFns',
     },
-    target: 'web',
     devtool: PROD ? false : 'source-maps',
   };
 };

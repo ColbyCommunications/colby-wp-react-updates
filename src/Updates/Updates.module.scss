@@ -4,18 +4,13 @@
 @import '~colby-bootstrap/src/animations';
 
 .Updates {
-  @supports (animation-fill-mode: both) {
-    animation: fadeIn 1s;
-    animation-fill-mode: both;
-  }
-
+  position: relative;
   display: flex;
   align-items: flex-start;
-  padding-top: .75rem;
-  padding-bottom: 1.5rem;
   flex-wrap: wrap;
   justify-content: flex-start;
-  position: relative;
+  padding-top: .75rem;
+  padding-bottom: 1.5rem;
 
   .update {
     margin-bottom: .75rem;
@@ -35,9 +30,9 @@
 }
 
 .badgeContainer {
+  padding: 0 0 1rem;
   width: 100%;
   text-transform: uppercase;
-  padding: 0 0 1rem;
 }
 
 .badge {
@@ -51,10 +46,10 @@
 }
 
 .moreLink {
+  margin-left: auto;
+  padding: 0 1.5rem .75rem;
   text-transform: uppercase;
   font-size: .891rem;
-  padding: 0 1.5rem .75rem;
-  margin-left: auto;
 }
 
 .excerpt {
@@ -66,9 +61,9 @@
 }
 
 :global(.continue-link) {
-  text-align: right;
   display: block;
-  color: $orange;
-  font-size: .891rem;
   padding-top: .5rem;
+  color: $orange;
+  text-align: right;
+  font-size: .891rem;
 }

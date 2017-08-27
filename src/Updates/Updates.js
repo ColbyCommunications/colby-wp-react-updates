@@ -5,20 +5,8 @@ import dateFns from 'date-fns';
 
 import styles from './Updates.module.scss';
 
-const Updates = ({
-  extraClass,
-  moreLink,
-  style,
-  title,
-  updates,
-  accent,
-  accentText,
-}) =>
-  (<div
-    className={`${style === 'card' ? 'card' : ''} ${styles.Updates} ${styles[
-      extraClass
-    ]}`}
-  >
+const Updates = ({ extraClass, moreLink, style, title, updates, accent, accentText }) =>
+  (<div className={`${style === 'card' ? 'card' : ''} ${styles.Updates} ${styles[extraClass]}`}>
     <div className={styles.badgeContainer}>
       <span
         className={`badge ${styles.badge}`}
@@ -26,13 +14,10 @@ const Updates = ({
         style={{ color: accentText, backgroundColor: accent }}
       />
     </div>
-    {(updates || []).map((update) =>
+    {(updates || []).map(update =>
       (<div key={update.id} className={styles.update}>
         <h4>
-          <a
-            href={update.link}
-            dangerouslySetInnerHTML={{ __html: update.title.rendered }}
-          />
+          <a href={update.link} dangerouslySetInnerHTML={{ __html: update.title.rendered }} />
         </h4>
         <div className={styles.updateDate}>
           {dateFns.format(update.date, 'MMMM DD, YYYY')}
@@ -45,13 +30,12 @@ const Updates = ({
               .split(' ')
               .slice(0, 30)
               .join(' ')
-              .replace(
-                '&#8230;',
-                ''
-              )} ... <a class="continue-link display-3" href=${update.link}>Continue reading</a>`,
+              .replace('&#8230;', '')} ... <a class="continue-link display-3" href=${update.link}>
+                Continue reading
+              </a>`,
           }}
         />
-      </div>)
+      </div>),
     )}
     {moreLink
       ? <a className={styles.moreLink} href={moreLink}>

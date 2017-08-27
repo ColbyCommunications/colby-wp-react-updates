@@ -67,26 +67,20 @@
             transform: translateY(0); } }
 
 .Updates--1hIvX {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-top: .75rem;
-  padding-bottom: 1.5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  position: relative; }
-  @supports ((-webkit-animation-fill-mode: both) or (animation-fill-mode: both)) {
-    .Updates--1hIvX {
-      -webkit-animation: fadeIn--3OkRA 1s;
-              animation: fadeIn--3OkRA 1s;
-      -webkit-animation-fill-mode: both;
-              animation-fill-mode: both; } }
+  padding-top: .75rem;
+  padding-bottom: 1.5rem; }
   .Updates--1hIvX .update--2SBej {
     margin-bottom: .75rem;
     width: 100%;
@@ -99,9 +93,9 @@
     font-size: .841rem; }
 
 .badgeContainer--q7OrV {
+  padding: 0 0 1rem;
   width: 100%;
-  text-transform: uppercase;
-  padding: 0 0 1rem; }
+  text-transform: uppercase; }
 
 .badge--1nNG7 {
   background-color: #002878;
@@ -112,10 +106,10 @@
       color: var(--accent-text, #fff); } }
 
 .moreLink--5tLAa {
-  text-transform: uppercase;
-  font-size: .891rem;
+  margin-left: auto;
   padding: 0 1.5rem .75rem;
-  margin-left: auto; }
+  text-transform: uppercase;
+  font-size: .891rem; }
 
 .excerpt--22Fmi {
   font-size: .891rem;
@@ -124,10 +118,10 @@
     margin-bottom: .25rem; }
 
 .continue-link {
-  text-align: right;
   display: block;
+  padding-top: .5rem;
   color: #d14124;
-  font-size: .891rem;
-  padding-top: .25rem; }
+  text-align: right;
+  font-size: .891rem; }
 
 /*# sourceMappingURL=colby-wp-react-updates.css.map*/

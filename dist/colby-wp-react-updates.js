@@ -137,7 +137,7 @@ var UpdatesFromEndpoint = function (_React$Component) {
     value: function fetchUpdates() {
       var _this2 = this;
 
-      var url = this.props.endpoint.replace('{{siteUrl}}', window.COLBY_SITE_URL);
+      var url = this.props.endpoint;
 
       fetch(url).then(function (response) {
         return response.json();
@@ -150,7 +150,7 @@ var UpdatesFromEndpoint = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(_Updates2.default, {
         updates: this.state.updates,
-        moreLink: this.props.moreLink ? this.props.moreLink.replace('{{siteUrl}}', window.COLBY_SITE_URL) : null
+        moreLink: this.props.moreLink ? this.props.moreLink : null
       });
     }
   }]);
@@ -213,9 +213,7 @@ var Updates = function Updates(_ref) {
       accentText = _ref.accentText;
   return _react2.default.createElement(
     'div',
-    {
-      className: (style === 'card' ? 'card' : '') + ' ' + _UpdatesModule2.default.Updates + ' ' + _UpdatesModule2.default[extraClass]
-    },
+    { className: (style === 'card' ? 'card' : '') + ' ' + _UpdatesModule2.default.Updates + ' ' + _UpdatesModule2.default[extraClass] },
     _react2.default.createElement(
       'div',
       { className: _UpdatesModule2.default.badgeContainer },
@@ -232,10 +230,7 @@ var Updates = function Updates(_ref) {
         _react2.default.createElement(
           'h4',
           null,
-          _react2.default.createElement('a', {
-            href: update.link,
-            dangerouslySetInnerHTML: { __html: update.title.rendered }
-          })
+          _react2.default.createElement('a', { href: update.link, dangerouslySetInnerHTML: { __html: update.title.rendered } })
         ),
         _react2.default.createElement(
           'div',
@@ -245,7 +240,7 @@ var Updates = function Updates(_ref) {
         _react2.default.createElement('div', {
           className: _UpdatesModule2.default.excerpt + ' pt-2',
           dangerouslySetInnerHTML: {
-            __html: update.excerpt.rendered.split(' ').slice(0, 30).join(' ') + ' <a class="continue-link display-3" href=' + update.link + '>Continue reading</a>'
+            __html: update.excerpt.rendered.replace('</p>', '').split(' ').slice(0, 30).join(' ').replace('&#8230;', '') + ' ... <a class="continue-link display-3" href=' + update.link + '>\n                Continue reading\n              </a>'
           }
         })
       );
@@ -313,7 +308,7 @@ window.addEventListener('load', loadUpdates);
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"Updates":"Updates--1hIvX","fadeIn":"fadeIn--3OkRA","update":"update--2SBej","updateDate":"updateDate--1GMmn","badgeContainer":"badgeContainer--q7OrV","badge":"badge--1nNG7","moreLink":"moreLink--5tLAa","excerpt":"excerpt--22Fmi","floatInUp":"floatInUp--IeoBH","floatInLeft":"floatInLeft--OPlSI","slideInDown":"slideInDown--13zT1"};
+module.exports = {"Updates":"Updates--1hIvX","update":"update--2SBej","updateDate":"updateDate--1GMmn","badgeContainer":"badgeContainer--q7OrV","badge":"badge--1nNG7","moreLink":"moreLink--5tLAa","excerpt":"excerpt--22Fmi","fadeIn":"fadeIn--3OkRA","floatInUp":"floatInUp--IeoBH","floatInLeft":"floatInLeft--OPlSI","slideInDown":"slideInDown--13zT1"};
 
 /***/ }),
 /* 7 */
