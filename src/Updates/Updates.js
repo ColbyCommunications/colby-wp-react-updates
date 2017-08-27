@@ -5,14 +5,10 @@ import dateFns from 'date-fns';
 
 import styles from './Updates.module.scss';
 
-const Updates = ({ extraClass, moreLink, style, title, updates, accent, accentText }) =>
-  (<div className={`${style === 'card' ? 'card' : ''} ${styles.Updates} ${styles[extraClass]}`}>
+const Updates = ({ moreLink, style, title, updates }) =>
+  (<div className={`${style === 'card' ? 'card' : ''} ${styles.Updates}`}>
     <div className={styles.badgeContainer}>
-      <span
-        className={`badge ${styles.badge}`}
-        dangerouslySetInnerHTML={{ __html: title }}
-        style={{ color: accentText, backgroundColor: accent }}
-      />
+      <span className={`badge ${styles.badge}`} dangerouslySetInnerHTML={{ __html: title }} />
     </div>
     {(updates || []).map(update =>
       (<div key={update.id} className={styles.update}>
@@ -45,9 +41,6 @@ const Updates = ({ extraClass, moreLink, style, title, updates, accent, accentTe
   </div>);
 
 Updates.propTypes = {
-  accent: PropTypes.string,
-  accentText: PropTypes.string,
-  extraClass: PropTypes.string,
   moreLink: PropTypes.string,
   style: PropTypes.string,
   title: PropTypes.string,
@@ -55,9 +48,6 @@ Updates.propTypes = {
 };
 
 Updates.defaultProps = {
-  accent: null,
-  accentText: null,
-  extraClass: '',
   moreLink: null,
   style: null,
   title: 'Updates',

@@ -204,24 +204,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /* eslint react/no-danger: 0 */
 var Updates = function Updates(_ref) {
-  var extraClass = _ref.extraClass,
-      moreLink = _ref.moreLink,
+  var moreLink = _ref.moreLink,
       style = _ref.style,
       title = _ref.title,
-      updates = _ref.updates,
-      accent = _ref.accent,
-      accentText = _ref.accentText;
+      updates = _ref.updates;
   return _react2.default.createElement(
     'div',
-    { className: (style === 'card' ? 'card' : '') + ' ' + _UpdatesModule2.default.Updates + ' ' + _UpdatesModule2.default[extraClass] },
+    { className: (style === 'card' ? 'card' : '') + ' ' + _UpdatesModule2.default.Updates },
     _react2.default.createElement(
       'div',
       { className: _UpdatesModule2.default.badgeContainer },
-      _react2.default.createElement('span', {
-        className: 'badge ' + _UpdatesModule2.default.badge,
-        dangerouslySetInnerHTML: { __html: title },
-        style: { color: accentText, backgroundColor: accent }
-      })
+      _react2.default.createElement('span', { className: 'badge ' + _UpdatesModule2.default.badge, dangerouslySetInnerHTML: { __html: title } })
     ),
     (updates || []).map(function (update) {
       return _react2.default.createElement(
@@ -254,9 +247,6 @@ var Updates = function Updates(_ref) {
 };
 
 Updates.propTypes = {
-  accent: _propTypes2.default.string,
-  accentText: _propTypes2.default.string,
-  extraClass: _propTypes2.default.string,
   moreLink: _propTypes2.default.string,
   style: _propTypes2.default.string,
   title: _propTypes2.default.string,
@@ -264,9 +254,6 @@ Updates.propTypes = {
 };
 
 Updates.defaultProps = {
-  accent: null,
-  accentText: null,
-  extraClass: '',
   moreLink: null,
   style: null,
   title: 'Updates'

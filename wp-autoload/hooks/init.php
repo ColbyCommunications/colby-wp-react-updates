@@ -10,6 +10,11 @@ function render_colby_updates_shortcode( $atts ) {
 		$more_link = "data-more-link={$atts['more-link']}";
 	}
 
+	$title = '';
+	if ( ! empty( $atts['title'] ) ) {
+		$title = "data-title={$atts['title']}";
+	}
+
 	return "
 <div
   data-colby-updates
