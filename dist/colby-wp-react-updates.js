@@ -295,7 +295,7 @@ window.addEventListener('load', loadUpdates);
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"Updates":"Updates--1hIvX","update":"update--2SBej","updateDate":"updateDate--1GMmn","badgeContainer":"badgeContainer--q7OrV","badge":"badge--1nNG7","moreLink":"moreLink--5tLAa","excerpt":"excerpt--22Fmi","fadeIn":"fadeIn--3OkRA","floatInUp":"floatInUp--IeoBH","floatInLeft":"floatInLeft--OPlSI","slideInDown":"slideInDown--13zT1"};
+module.exports = {"Updates":"Updates--1hIvX","update":"update--2SBej","updateDate":"updateDate--1GMmn","badgeContainer":"badgeContainer--q7OrV","badge":"badge--1nNG7","moreLink":"moreLink--5tLAa","excerpt":"excerpt--22Fmi"};
 
 /***/ }),
 /* 7 */

@@ -1,6 +1,6 @@
 <?php
 
-add_action( 'wp_enqueue_scripts', function () {
+add_action( 'wp_enqueue_scripts', function() {
 	global $post;
 
 	if ( has_shortcode( $post->post_content, 'colby-updates' ) ) {
@@ -21,7 +21,7 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_enqueue_style(
 			$package_json->name,
 			"$dist/{$package_json->name}$min.css",
-			[ 'colby-bootstrap' ],
+			[],
 			$package_json->version
 		);
 	}

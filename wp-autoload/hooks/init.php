@@ -1,8 +1,10 @@
 <?php
 
 function render_colby_updates_shortcode( $atts ) {
+	$atts = $atts ?: [];
+
 	if ( ! $atts['endpoint'] ) {
-		return '';
+		$atts['endpoint'] = get_rest_url( get_current_blog_id(), 'wp/v2/posts' );
 	}
 
 	$more_link = '';

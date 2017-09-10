@@ -1,7 +1,5 @@
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/mixins';
-@import '~colby-bootstrap/variables';
-@import '~colby-bootstrap/src/animations';
 
 .Updates {
   position: relative;
@@ -36,12 +34,12 @@
 }
 
 .badge {
-  background-color: $blue;
-  color: $white;
+  background-color: #002878;
+  color: white;
 
-  @supports (background-color: var(--accent, $blue)) {
-    background-color: var(--accent, $blue);
-    color: var(--accent-text, $white);
+  @supports (background-color: var(--accent, #002878)) {
+    background-color: var(--accent, #002878);
+    color: var(--accent-text, white);
   }
 }
 
@@ -63,7 +61,7 @@
 :global(.continue-link) {
   display: block;
   padding-top: .5rem;
-  color: $orange;
+  color: #d14124;
   text-align: right;
   font-size: .891rem;
 }
